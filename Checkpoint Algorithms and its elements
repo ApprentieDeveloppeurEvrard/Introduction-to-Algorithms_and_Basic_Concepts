@@ -1,0 +1,17 @@
+Début
+    Déclarer la variable longueur à 0
+    Déclarer la variable compte_mots à 1 (on suppose qu'il y a au moins un mot)
+    Déclarer la variable compte_voyelles à 0
+    Lire la phrase (jusqu'à un point)
+
+    Pour chaque caractère dans la phrase :
+        Si le caractère est un espace :
+            Incrémenter compte_mots (un mot de plus)
+        Sinon, si le caractère est une voyelle (a, e, i, o, u) :
+            Incrémenter compte_voyelles (une voyelle de plus)
+        Incrémenter longueur (pour chaque caractère)
+
+    Afficher "La longueur de la phrase est : ", longueur
+    Afficher "Le nombre de mots est : ", compte_mots
+    Afficher "Le nombre de voyelles est : ", compte_voyelles
+Fin
