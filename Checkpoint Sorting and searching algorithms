@@ -1,0 +1,32 @@
+function insertionSort(arr) {
+    // Je commence à la deuxième position du tableau
+    for (let i = 1; i < arr.length; i++) {
+        let current = arr[i]; // L'élément à placer à la bonne position
+        let j = i - 1; // L'index de l'élément juste avant l'élément actuel
+
+        // Tant que l'élément de gauche est plus grand que l'élément courant
+        while (j >= 0) {
+            if (arr[j] > current) {
+                // Déplacer l'élément de gauche à la droite
+                arr[j + 1] = arr[j];
+                j--; // Aller à l'élément précédent
+            } else {
+                break; // Si l'élément à gauche n'est pas plus grand, on s'arrête
+            }
+        }
+        
+        // Mettre l'élément à sa place
+        arr[j + 1] = current;
+    }
+
+    return arr; // Retourner le tableau trié
+}
+
+// Un exemple de tableau à trier
+let monTableau = [12, 11, 13, 5, 6];
+
+// Tri du tableau
+let resultatTrie = insertionSort(monTableau);
+
+// Affichage du résultat
+console.log(resultatTrie);
